@@ -40,6 +40,8 @@ const NoAccessPage = loadable(() => import(/* webpackChunkName: "NoAccessPage" *
 // Styleguide helps you to review current components and develop new ones
 const StyleguidePage = loadable(() => import(/* webpackChunkName: "StyleguidePage" */ '../containers/StyleguidePage/StyleguidePage'));
 
+const SubscriptionPage = loadable(() => import(/* webpackChunkName: "SubscriptionPage" */ '../containers/SubscriptionPage/SubscriptionPage'));
+
 export const ACCOUNT_SETTINGS_PAGES = [
   'ContactDetailsPage',
   'PasswordChangePage',
@@ -403,6 +405,11 @@ const routeConfiguration = (layoutConfig, accessControlConfig) => {
       name: 'PreviewResolverPage',
       component: PreviewResolverPage ,
     },
+    {
+      path: '/subscription',
+      name: 'SubscriptionPage',
+      component: SubscriptionPage,
+    }
   ];
 };
 

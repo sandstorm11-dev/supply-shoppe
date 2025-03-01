@@ -1,0 +1,75 @@
+@import '../../styles/marketplaceDefaults.css';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planCardsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+
+  @media (--viewportTabletDown) {
+    flex-direction: column;
+  }
+}
+
+.planCard {
+  background-color: var(--marketplaceColor);
+  border-radius: 15px;
+  color: white;
+  padding: 50px;
+  position: relative;
+  
+  @media (--viewportTabletDown) {
+    width: 100%;
+  }
+}
+
+.bestDealBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #cc2a31;
+  border-radius: 30px;
+  text-align: center;
+  width: 100px;
+  padding: 3px;
+}
+
+.featureListContainer {
+  font-size: 12px;
+  min-height: 150px;
+
+  & p {
+    margin: 0;
+  }
+}
+
+.ctaButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.ctaButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(189, 49, 57);
+  color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border-width: 0;
+  margin-left: 30px;
+}

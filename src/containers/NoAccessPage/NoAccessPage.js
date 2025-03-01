@@ -63,20 +63,28 @@ const CTAButtonMaybe = props => {
 
   const isInternalLink = type === 'internal' && ctaLink.route;
 
-  return isInternalLink ? (
+  // return isInternalLink ? (
+  //   <NamedLink
+  //     name={ctaLink.route.name}
+  //     to={ctaLink.route.to}
+  //     params={ctaLink.route.params}
+  //     className={css.ctaButton}
+  //   >
+  //     {text}
+  //   </NamedLink>
+  // ) : (
+  //   <ExternalLink href={ctaLink.link} className={css.ctaButton}>
+  //     {text}
+  //   </ExternalLink>
+  // );
+  return (
     <NamedLink
-      name={ctaLink.route.name}
-      to={ctaLink.route.to}
-      params={ctaLink.route.params}
+      name="SubscriptionPage"
       className={css.ctaButton}
     >
       {text}
     </NamedLink>
-  ) : (
-    <ExternalLink href={ctaLink.link} className={css.ctaButton}>
-      {text}
-    </ExternalLink>
-  );
+  )
 };
 
 /**
