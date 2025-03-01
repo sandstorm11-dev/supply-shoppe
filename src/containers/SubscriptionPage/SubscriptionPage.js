@@ -40,6 +40,7 @@ const planList = {
 }
 
 export default function SubscriptionPage() {
+
   return (
     <Page title='Subscription'>
       <LayoutSingleColumn
@@ -60,7 +61,9 @@ export default function SubscriptionPage() {
                 </div>
                 <div
                   className={css.ctaButtonContainer}
-                  onClick={() => { }}
+                  onClick={() => {
+                    window.location.href = value.paymentLink
+                  }}
                 >
                   <div>{value.ctaLabel}</div>
                   <div
